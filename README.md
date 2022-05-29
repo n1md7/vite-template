@@ -1,6 +1,6 @@
-# vite-lit
+# vite-JS
 
-Template repository for vite-lit.
+Template repository for vite-JS.
 
 Includes:
 - SCSS plugin
