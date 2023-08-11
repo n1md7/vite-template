@@ -1,23 +1,66 @@
 {
-  "name": "ira-saf",
+  "name": "vite-template",
   "private": true,
-  "version": "0.0.0",
+  "description": "ViteJS + Typescript + Vitest",
+  "author": {
+    "name": "Harry Kodua",
+    "email": "b.kodua@gmail.com",
+    "url": "https://github.com/n1md7"
+  },
+  "license": "ISC",
+  "main": "dist/main.js",
+  "bugs": {
+    "url": "https://github.com/n1md7/vite-JS/issues"
+  },
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 8080",
-    "format": "npx prettier --write ."
-  },
-  "dependencies": {
-    "lit": "^2.0.2"
+    "build": "tsc && vite build --mode=production",
+    "test": "vitest --mode=test --no-watch",
+    "preview": "vite preview",
+    "format": "npx lint-staged",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "eslint": "^8.16.0",
-    "prettier": "2.6.2",
-    "sass": "^1.52.1",
-    "vite": "^2.9.9"
+    "@types/jest": "^29.5.3",
+    "husky": "^8.0.3",
+    "jsdom": "^22.1.0",
+    "lint-staged": "^13.2.3",
+    "prettier": "3.0.1",
+    "sass": "^1.65.1",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.1"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
-  }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/$1"
+    },
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coveragePathIgnorePatterns": [
+      "main.ts"
+    ],
+    "coverageDirectory": "../reports/coverage",
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "18.17.0",
+    "npm": ">=9.0.0"
+  },
+  "engineStrict": true
 }
