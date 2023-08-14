@@ -36,28 +36,6 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/$1"
-    },
-    "rootDir": "src",
-    "testRegex": ".*\\.spec\\.ts$",
-    "transform": {
-      "^.+\\.(t|j)s$": "ts-jest"
-    },
-    "collectCoverageFrom": [
-      "**/*.(t|j)s"
-    ],
-    "coveragePathIgnorePatterns": [
-      "main.ts"
-    ],
-    "coverageDirectory": "../reports/coverage",
-    "testEnvironment": "node"
-  },
   "engines": {
     "node": "18.17.0",
     "npm": ">=9.0.0"
