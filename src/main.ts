@@ -1,4 +1,7 @@
+import env from './utils/Env';
 import { Calculator } from './Calculator';
+
+console.info('env', env);
 
 const calculator = new Calculator();
 

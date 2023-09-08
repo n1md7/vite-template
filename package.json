@@ -7,7 +7,7 @@
     "email": "b.kodua@gmail.com",
     "url": "https://github.com/n1md7"
   },
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/main.js",
   "bugs": {
     "url": "https://github.com/n1md7/vite-JS/issues"
@@ -15,23 +15,29 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build --mode=production",
+    "dev": "vite mode=development",
+    "build:github": "tsc && vite build --mode=github",
+    "build:crazy": "tsc && vite build --mode=crazy",
+    "build:itch": "tsc && vite build --mode=itch",
     "test": "vitest --mode=test --no-watch",
     "preview": "vite preview",
     "format": "npx lint-staged",
-    "prepare": "husky install"
+    "husky": "husky install"
+  },
+  "dependencies": {
+    "lil-gui": "^0.18.2",
+    "tiny-emitter": "^2.1.0",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.3",
     "husky": "^8.0.3",
     "jsdom": "^22.1.0",
-    "lint-staged": "^13.2.3",
-    "prettier": "3.0.1",
-    "sass": "^1.65.1",
-    "typescript": "^5.1.6",
+    "lint-staged": "^14.0.1",
+    "prettier": "3.0.3",
+    "sass": "^1.66.1",
+    "typescript": "^5.2.2",
     "vite": "^4.4.9",
-    "vitest": "^0.34.1"
+    "vitest": "^0.34.4"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

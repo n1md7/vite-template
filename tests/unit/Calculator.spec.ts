@@ -1,4 +1,5 @@
-import { Calculator } from '@/src/Calculator';
+import { Calculator } from '/src/Calculator';
+import { describe, expect, it } from 'vitest';
 
 describe('Calculator', () => {
   it('should add', () => {
