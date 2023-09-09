@@ -1,7 +1,7 @@
 import env from './utils/Env';
 import { Calculator } from './Calculator';
 
-console.info('env', env);
+console.info('Is development mode:', env.isDevelopment());
 
 const calculator = new Calculator();
 
