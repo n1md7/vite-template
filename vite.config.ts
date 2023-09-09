@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite';
 import { envSchema } from './src/utils/validations/env.schema';
 
-export default defineConfig(({ mode, command }) => {
+export default defineConfig(({ mode }) => {
   envSchema.validateSync({ mode }, { strict: true });
 
   return {
@@ -27,6 +27,12 @@ export default defineConfig(({ mode, command }) => {
       sourcemap: true,
       assetsDir: '.',
       emptyOutDir: true,
+      rollupOptions: {
+        input: {
+          index: 'index.html',
+          about: 'about.html',
+        },
+      },
     },
     plugins: [],
     test: {
