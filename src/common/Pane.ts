@@ -1,4 +1,4 @@
-import { Debug } from '/src/utils/Debug';
+import { Debug } from '/src/common/Debug';
 import { Pane } from 'tweakpane';
 
 export const pane = new Pane({

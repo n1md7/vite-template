@@ -1,6 +1,6 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite';
-import { envSchema } from './src/utils/validations/env.schema';
+import { envSchema } from './src/common/validations/env.schema';
 
 import glsl from 'vite-plugin-glsl';
 import solidPlugin from 'vite-plugin-solid';
@@ -33,6 +33,7 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: {
           index: 'index.html',
+          about: 'about.html',
         },
       },
     },

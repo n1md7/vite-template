@@ -1,4 +1,4 @@
-import { configSchema } from '/src/utils/validations/config.schema';
+import { configSchema } from '/src/common/validations/config.schema';
 
 export class Config {
   constructor(private readonly vars: ImportMetaEnv) {
