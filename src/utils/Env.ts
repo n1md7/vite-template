@@ -1,30 +1,33 @@
-import { Mode } from '/src/enums/mode';
+import { Platform } from '/src/enums/platform';
 
 export class Env {
   constructor(readonly mode: string) {}
 
   isDevelopment() {
-    return this.mode === Mode.development;
+    return this.mode === Platform.development;
   }
 
   isCrazyGames() {
-    return this.mode === Mode.crazyGames;
+    return this.mode === Platform.crazyGames;
   }
 
   isItchIo() {
-    return this.mode === Mode.itchIo;
+    return this.mode === Platform.itchIo;
   }
 
+  isPoki() {
+    return this.mode === Platform.poki;
+  }
   isGithubPages() {
-    return this.mode === Mode.githubPages;
+    return this.mode === Platform.githubPages;
   }
 
   isUnitTest() {
-    return this.mode === Mode.unitTest;
+    return this.mode === Platform.unitTest;
   }
 
   isE2ETest() {
-    return this.mode === Mode.e2eTest;
+    return this.mode === Platform.e2eTest;
   }
 }
 

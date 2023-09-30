@@ -4,5 +4,9 @@
   "printWidth": 120,
   "tabWidth": 2,
   "useTabs": false,
-  "semi": true
+  "semi": true,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "avoid",
+  "proseWrap": "preserve"
 }

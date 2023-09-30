@@ -17,9 +17,14 @@
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
     "paths": {
-      "/src/*": ["src/*"]
-    }
+      "/src/*": ["src/*"],
+      "/public/*": ["public/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "solid-js"
   },
   "include": ["src", "tests", "src/**/*.d.ts"],
 }
