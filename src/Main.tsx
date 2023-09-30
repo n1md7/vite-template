@@ -4,8 +4,8 @@ import { createEffect } from 'solid-js';
 export function Main() {
   const game = new Game();
 
-  createEffect(() => {
-    game.init();
+  createEffect(async () => {
+    await game.init();
 
     return () => game.destroy();
   });

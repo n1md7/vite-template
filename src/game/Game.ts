@@ -1,17 +1,27 @@
+import { State } from '/src/enums/state';
+import { StateManager } from '/src/game/managers/StateManager';
+
 export class Game {
-  init() {
-    console.log('Game initialized');
+  state: StateManager;
+
+  constructor() {
+    this.state = new StateManager(this);
   }
 
-  start() {
+  async init() {
+    console.log('Game initialized');
+    await this.state.changeState(State.Load);
+  }
+
+  async start() {
     console.log('Game started');
   }
 
-  stop() {
+  async stop() {
     console.log('Game stopped');
   }
 
-  destroy() {
+  async destroy() {
     console.log('Game destroyed');
   }
 }
