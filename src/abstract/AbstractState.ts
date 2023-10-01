@@ -13,5 +13,7 @@ export abstract class AbstractState {
     console.groupEnd();
   }
 
-  abstract update(): Promise<void>;
+  async update() {
+    await this.game.stage.update();
+  }
 }

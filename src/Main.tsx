@@ -1,3 +1,5 @@
+import { AssetLoader } from '/src/components/AssetLoader';
+import { GamePlay } from '/src/components/GamePlay';
 import { Game } from '/src/game/Game';
 import { createEffect } from 'solid-js';
 
@@ -11,8 +13,9 @@ export function Main() {
   });
 
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <AssetLoader />
+      <GamePlay />
+    </>
   );
 }

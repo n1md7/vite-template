@@ -1,17 +1,19 @@
 import { AbstractState } from '/src/abstract/AbstractState';
 import { State } from '/src/enums/state';
+import { delay } from '/src/game/utils/delay';
+import * as store from '/src/store';
 
 export class LoadState extends AbstractState {
   async activate() {
     await super.activate();
-
-    // TODO: Load assets
-
+    store.setShowLoader(true);
+    await this.game.stage.startAssetLoading();
+    await delay(2000);
     await this.game.state.changeState(State.Play);
   }
 
   async deactivate() {
-    await this.game.start();
+    store.setShowLoader(false);
     await super.deactivate();
   }
 
